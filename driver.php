@@ -18,7 +18,7 @@ $accname= $_REQUEST['accname'];
 if(empty($firstname) || empty($lastname) || empty($address) || empty($refferal) || empty($phone) || empty($email) || empty($lice) || empty($ninnumber) || empty($lasdri) || empty($date) || empty($file) || empty($bname) || empty($accnumber) || empty($accname)) {
     echo ('Please fill all fields');
 }else{
-    mail("ojeolaponle@gmail.com","Driver Registration", $firstname , $lastname , $address , $refferal , $phone , $email , $lice , $ninnumber , $lasdri , $date , $file , $bname , $accnumber , $accname );
+    mail("ojeolaponle@gmail.com","Driver Registration", $firstname , $lastname , $address , $refferal , $phone , $email , $lice , $ninnumber , $lasdri , $date , $file , $bname , $accnumber , $accname, "From: $firstname <$email>");
     echo "<script type='text/javascript'>alert('Your Registration has been completed successfully');
 
     window.history.log(-1);
