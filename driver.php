@@ -15,11 +15,9 @@ $bname= $_REQUEST['bname'];
 $accnumber= $_REQUEST['accnumber'];
 $accname= $_REQUEST['accname'];
 
-if(empty($firstname) || empty($lastname) || empty($address) || empty($refferal) || empty($phone) || empty($email) || empty($lice) || empty($ninnumber) || empty($lasdri) || empty($date) || empty($file) || empty($bname) || empty($accnumber) || empty($accname));
-{
-    echo "Please fill all fields";
-}
-else{
+if(empty($firstname) || empty($lastname) || empty($address) || empty($refferal) || empty($phone) || empty($email) || empty($lice) || empty($ninnumber) || empty($lasdri) || empty($date) || empty($file) || empty($bname) || empty($accnumber) || empty($accname)) {
+    echo ('Please fill all fields');
+}else{
     mail("ojeolaponle@gmail.com","Driver Registration", $firstname , $lastname , $address , $refferal , $phone , $email , $lice , $ninnumber , $lasdri , $date , $file , $bname , $accnumber , $accname );
     echo "<script type='text/javascript'>alert('Your Registration has been completed successfully');
 
@@ -27,6 +25,7 @@ else{
 
     </script>";
 }
+?>
 // $to = "youremail@mail.com";
 // $subject = "Mail From Driver Registration";
 // $txt ="firstname = ". $firstname . "\r\n  lastname = " . $lastname . "\r\n  address = " . $address . "\r\n  refferal = " . $refferal . "\r\n  phone =  " . $phone . "\r\n  email = " . $email . "\r\n  lice = " . $lice . "\r\n  ninnumber = " . $ninnumber . "\r\n  lasdri =" . $lasdri . "\r\n  date = " . $date . "\r\n  file = ".$file ."\r\n  bname = " . $bname ."\r\n  accnumber = " . $accnumber ."\r\n  accname = " . $accname;
@@ -37,4 +36,4 @@ else{
 // }
 // //redirect
 // header("Location:index.html");
- ?>
+
